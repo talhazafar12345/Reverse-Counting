@@ -1,0 +1,80 @@
+Index.html
+
+<h1>Reverse Counting</h1>
+<input class="p1" placeholder="Enter Number" type="text" name="" id="inp">
+
+<button onclick="print()">Reverse</button>
+<button onclick="window.location.reload()">Remove</button>
+
+
+
+<div id="para">
+
+</div>
+
+style.css
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+
+.p1{
+    position: relative;
+    left: 165px;
+    border-radius: 10px;
+    height: 30px;
+    border: none;
+    color: darkcyan;
+    padding-left: 5px;
+    
+}
+
+button{
+    position: relative;
+    left: 170px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+}
+
+#para{
+    position: relative;
+    left: 240px;
+    margin-top: 20px;
+    list-style-type: square;
+    color: cyan;
+}
+
+body{
+    background-color: mediumslateblue;
+}
+
+input::placeholder{
+
+    color: red;
+}
+
+app.js
+
+function print(){
+
+var getInp=document.getElementById("inp")
+
+var getPara=document.getElementById("para")
+
+for(var i=getInp.value;i>=1;i--){
+
+  getPara.innerHTML+=`<li>${i}</li>`
+}
+
+
+
+getInp.value=""
+
+
+
+}
